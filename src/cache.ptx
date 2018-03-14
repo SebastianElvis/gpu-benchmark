@@ -1,0 +1,231 @@
+
+Fatbin elf code:
+================
+arch = sm_50
+code version = [1,7]
+producer = <unknown>
+host = linux
+compile_size = 64bit
+
+Fatbin elf code:
+================
+arch = sm_50
+code version = [1,7]
+producer = cuda
+host = linux
+compile_size = 64bit
+
+Fatbin ptx code:
+================
+arch = sm_50
+code version = [6,0]
+producer = cuda
+host = linux
+compile_size = 64bit
+compressed
+
+
+
+
+
+
+
+
+.version 6.0
+.target sm_50
+.address_size 64
+
+
+.extern .func (.param .b64 func_retval0) malloc
+(
+.param .b64 malloc_param_0
+)
+;
+.global .align 8 .u64 nonce;
+
+.visible .entry _Z4initv(
+
+)
+{
+.reg .b64 %rd<3>;
+
+
+mov.u64 %rd1, 2048000;
+
+	{
+.reg .b32 temp_param_reg;
+
+	.param .b64 param0;
+st.param.b64	[param0+0], %rd1;
+.param .b64 retval0;
+call.uni (retval0), 
+malloc, 
+(
+param0
+);
+ld.param.b64	%rd2, [retval0+0];
+
+
+	}
+	st.global.u64 [nonce], %rd2;
+ret;
+}
+
+
+.visible .entry _Z7setValsv(
+
+)
+{
+.reg .pred %p<2>;
+.reg .b32 %r<29>;
+.reg .b64 %rd<80>;
+
+
+mov.u32 %r28, 0;
+mov.u64 %rd79, 0;
+
+BB1_1:
+ld.global.u64 %rd4, [nonce];
+cvta.to.global.u64 %rd5, %rd4;
+add.s64 %rd6, %rd5, %rd79;
+st.global.u32 [%rd6], %r28;
+ld.global.u64 %rd7, [nonce];
+cvta.to.global.u64 %rd8, %rd7;
+add.s64 %rd9, %rd8, %rd79;
+add.s32 %r4, %r28, 1;
+st.global.u32 [%rd9+4], %r4;
+ld.global.u64 %rd10, [nonce];
+cvta.to.global.u64 %rd11, %rd10;
+add.s64 %rd12, %rd11, %rd79;
+add.s32 %r5, %r28, 2;
+st.global.u32 [%rd12+8], %r5;
+ld.global.u64 %rd13, [nonce];
+cvta.to.global.u64 %rd14, %rd13;
+add.s64 %rd15, %rd14, %rd79;
+add.s32 %r6, %r28, 3;
+st.global.u32 [%rd15+12], %r6;
+ld.global.u64 %rd16, [nonce];
+cvta.to.global.u64 %rd17, %rd16;
+add.s64 %rd18, %rd17, %rd79;
+add.s32 %r7, %r28, 4;
+st.global.u32 [%rd18+16], %r7;
+ld.global.u64 %rd19, [nonce];
+cvta.to.global.u64 %rd20, %rd19;
+add.s64 %rd21, %rd20, %rd79;
+add.s32 %r8, %r28, 5;
+st.global.u32 [%rd21+20], %r8;
+ld.global.u64 %rd22, [nonce];
+cvta.to.global.u64 %rd23, %rd22;
+add.s64 %rd24, %rd23, %rd79;
+add.s32 %r9, %r28, 6;
+st.global.u32 [%rd24+24], %r9;
+ld.global.u64 %rd25, [nonce];
+cvta.to.global.u64 %rd26, %rd25;
+add.s64 %rd27, %rd26, %rd79;
+add.s32 %r10, %r28, 7;
+st.global.u32 [%rd27+28], %r10;
+ld.global.u64 %rd28, [nonce];
+cvta.to.global.u64 %rd29, %rd28;
+add.s64 %rd30, %rd29, %rd79;
+add.s32 %r11, %r28, 8;
+st.global.u32 [%rd30+32], %r11;
+ld.global.u64 %rd31, [nonce];
+cvta.to.global.u64 %rd32, %rd31;
+add.s64 %rd33, %rd32, %rd79;
+add.s32 %r12, %r28, 9;
+st.global.u32 [%rd33+36], %r12;
+ld.global.u64 %rd34, [nonce];
+cvta.to.global.u64 %rd35, %rd34;
+add.s64 %rd36, %rd35, %rd79;
+add.s32 %r13, %r28, 10;
+st.global.u32 [%rd36+40], %r13;
+ld.global.u64 %rd37, [nonce];
+cvta.to.global.u64 %rd38, %rd37;
+add.s64 %rd39, %rd38, %rd79;
+add.s32 %r14, %r28, 11;
+st.global.u32 [%rd39+44], %r14;
+ld.global.u64 %rd40, [nonce];
+cvta.to.global.u64 %rd41, %rd40;
+add.s64 %rd42, %rd41, %rd79;
+add.s32 %r15, %r28, 12;
+st.global.u32 [%rd42+48], %r15;
+ld.global.u64 %rd43, [nonce];
+cvta.to.global.u64 %rd44, %rd43;
+add.s64 %rd45, %rd44, %rd79;
+add.s32 %r16, %r28, 13;
+st.global.u32 [%rd45+52], %r16;
+ld.global.u64 %rd46, [nonce];
+cvta.to.global.u64 %rd47, %rd46;
+add.s64 %rd48, %rd47, %rd79;
+add.s32 %r17, %r28, 14;
+st.global.u32 [%rd48+56], %r17;
+ld.global.u64 %rd49, [nonce];
+cvta.to.global.u64 %rd50, %rd49;
+add.s64 %rd51, %rd50, %rd79;
+add.s32 %r18, %r28, 15;
+st.global.u32 [%rd51+60], %r18;
+ld.global.u64 %rd52, [nonce];
+cvta.to.global.u64 %rd53, %rd52;
+add.s64 %rd54, %rd53, %rd79;
+add.s32 %r19, %r28, 16;
+st.global.u32 [%rd54+64], %r19;
+ld.global.u64 %rd55, [nonce];
+cvta.to.global.u64 %rd56, %rd55;
+add.s64 %rd57, %rd56, %rd79;
+add.s32 %r20, %r28, 17;
+st.global.u32 [%rd57+68], %r20;
+ld.global.u64 %rd58, [nonce];
+cvta.to.global.u64 %rd59, %rd58;
+add.s64 %rd60, %rd59, %rd79;
+add.s32 %r21, %r28, 18;
+st.global.u32 [%rd60+72], %r21;
+ld.global.u64 %rd61, [nonce];
+cvta.to.global.u64 %rd62, %rd61;
+add.s64 %rd63, %rd62, %rd79;
+add.s32 %r22, %r28, 19;
+st.global.u32 [%rd63+76], %r22;
+ld.global.u64 %rd64, [nonce];
+cvta.to.global.u64 %rd65, %rd64;
+add.s64 %rd66, %rd65, %rd79;
+add.s32 %r23, %r28, 20;
+st.global.u32 [%rd66+80], %r23;
+ld.global.u64 %rd67, [nonce];
+cvta.to.global.u64 %rd68, %rd67;
+add.s64 %rd69, %rd68, %rd79;
+add.s32 %r24, %r28, 21;
+st.global.u32 [%rd69+84], %r24;
+ld.global.u64 %rd70, [nonce];
+cvta.to.global.u64 %rd71, %rd70;
+add.s64 %rd72, %rd71, %rd79;
+add.s32 %r25, %r28, 22;
+st.global.u32 [%rd72+88], %r25;
+ld.global.u64 %rd73, [nonce];
+cvta.to.global.u64 %rd74, %rd73;
+add.s64 %rd75, %rd74, %rd79;
+add.s32 %r26, %r28, 23;
+st.global.u32 [%rd75+92], %r26;
+ld.global.u64 %rd76, [nonce];
+cvta.to.global.u64 %rd77, %rd76;
+add.s64 %rd78, %rd77, %rd79;
+add.s32 %r27, %r28, 24;
+st.global.u32 [%rd78+96], %r27;
+add.s64 %rd79, %rd79, 100;
+add.s32 %r28, %r28, 25;
+setp.ne.s32	%p1, %r28, 512000;
+@%p1 bra BB1_1;
+
+ret;
+}
+
+
+.visible .entry _Z7getValsv(
+
+)
+{
+
+
+
+ret;
+}
+
+
